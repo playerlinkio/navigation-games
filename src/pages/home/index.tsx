@@ -13,6 +13,55 @@ import {
     XIcon,
 } from '@heroicons/react/outline'
 
+const games=[
+    {
+        imageUrl:"https://awesomenear.com/img/logo/cryptoempire.jpg",
+        name:"CryptoEmpire",
+        introduce:"A NFT card game based on real-world crypto markets.",
+        url:"https://cryptoempire.games/",
+        Tactics:"Tactics",
+        CardGame:"CardGame",
+        tuite:"fa fa-twitter",
+        tuiteurl:"#",
+        chrome:"fa fa-chrome",
+        chromekurl:"#",
+    },
+    {
+        imageUrl: "https://cdn.discordapp.com/attachments/897398778166906911/899225504396218418/190612_6017.png",
+        name:"Crypto Fishing ",
+        introduce:"A casual game of fishingA casual game of fishing " ,
+        url:"http://playerlink.org",
+        Leisure:"Leisure",
+        tuite:"fa fa-twitter",
+        tuiteurl:"#",
+        chrome:"fa fa-chrome",
+        chromekurl:"#",
+
+    },{
+        imageUrl:"https://awesomenear.com/img/logo/cryptoempire.jpg",
+        name:"CryptoEmpire",
+        introduce:"A NFT card game based on real-world crypto markets.",
+    },
+    {
+        imageUrl:"https://awesomenear.com/img/logo/cryptoempire.jpg",
+        name:"CryptoEmpire",
+        introduce:"A NFT card game based on real-world crypto markets.",
+    },{
+        imageUrl:"https://awesomenear.com/img/logo/cryptoempire.jpg",
+        name:"CryptoEmpire",
+        introduce:"A NFT card game based on real-world crypto markets.",
+    },{
+        imageUrl:"https://awesomenear.com/img/logo/cryptoempire.jpg",
+        name:"CryptoEmpire",
+        introduce:"A NFT card game based on real-world crypto markets.",
+    },{
+        imageUrl:"https://awesomenear.com/img/logo/cryptoempire.jpg",
+        name:"CryptoEmpire",
+        introduce:"A NFT card game based on real-world crypto markets.",
+    },
+]
+
+
 const user = {
     name: 'HenryLiu',
     email: 'HenryLiu@playerlink.org',
@@ -33,12 +82,13 @@ const navigation = [
     { name: 'Settings', href: '#', children: [] },
 ]
 const sidebarNavigation = [
-    { name: 'Open', href: '#', icon: InboxIcon, current: true },
-    { name: 'Archive', href: '#', icon: ArchiveIcon, current: false },
-    { name: 'Customers', href: '#', icon: UserCircleIcon, current: false },
-    { name: 'Flagged', href: '#', icon: FlagIcon, current: false },
-    { name: 'Spam', href: '#', icon: BanIcon, current: false },
-    { name: 'Drafts', href: '#', icon: PencilAltIcon, current: false },
+    { name: 'Home', href: 'home', icon: InboxIcon, current: true },
+    { name: 'Archive', href: 'archive', icon: ArchiveIcon, current: false },
+    { name: 'Customers', href: 'customers', icon: UserCircleIcon, current: false },
+    { name: 'Flagged', href: 'flagged', icon: FlagIcon, current: false },
+    { name: 'Spam', href: 'spam', icon: BanIcon, current: false },
+    { name: 'Drafts', href: 'drafts', icon: PencilAltIcon, current: false },
+
 ]
 const userNavigation = [
     { name: 'Your Profile', href: '#' },
@@ -49,7 +99,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Home() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
@@ -302,9 +352,12 @@ export default function Example() {
           </header>
 
           {/* Bottom section */}
+
           <div className="min-h-0 flex-1 flex overflow-hidden">
               {/* Narrow sidebar*/}
-              <nav aria-label="Sidebar" className="hidden md:block md:flex-shrink-0 md:bg-gray-800 md:overflow-y-auto">
+              <nav aria-label="Sidebar" className="hidden md:block md:flex-shrink-0 md:bg-gray-800 md:overflow-y-auto
+              ">
+
                   <div className="relative w-20 flex flex-col p-3 space-y-3">
                       {sidebarNavigation.map((item) => (
                         <a
@@ -323,7 +376,7 @@ export default function Example() {
               </nav>
 
               {/* Main area */}
-              <main className="min-w-0 flex-1 border-t border-gray-200 lg:flex">
+              <main >
                   {/* Primary column */}
                   <section
                     aria-labelledby="primary-heading"
@@ -333,12 +386,58 @@ export default function Example() {
                           Home
                       </h1>
                       {/* Your content */}
+                      <div className="  overflow-auto ">
+                      <div className="flex" >
+                      <div className=" m-5 mb-10 md:m-20 md:h-20 md:w-80   ">
+                          <h1 className=" flex  text-center text-2xl md:text-3xl font-black ">
+                              <div className="fa fa-hand-o-right mr-3"></div>Popular Game
+                          </h1>
+                      </div>
+                  </div>
+                      <div className="  grid-cols-2  flex-wrap flex-row	 md:grid grid-cols-3 ">
+                          {games.map((game)=>(
+                              <div key={game.name} className=" hover:shadow-2xl bg-white ml-5 mr-5 mb-5 rounded-lg md:ml-20 md:mr-20  md:mb-20  "  >
+                                  <div className="p-5  relative">
+                                      <div className="md:flex ">
+                                          <a href={game.url} className="h-12 ">
+                                              <img src={game.imageUrl} className="h-12 w-12 rounded-3xl md:mr-9"/>
+                                          </a>
+                                          <div className="mt-2 md:ml-2 md:mt-0">
+                                              <a href={game.url}>
+                                                  <h1 className="text-xl font-black">{game.name}</h1>
+                                                  <h2 className="mt-3 font-normal text-sm text-gray-600">{game.introduce}</h2></a>
+                                              <div className=" font-extrabold mt-3 justify-start flex  gap-x-2 text-sm " >
+                                                  <span className=" rounded-md bg-gray-100 " >{game.Tactics}</span>
+                                                  <span className=" rounded-md bg-gray-100 " >{game.CardGame}</span>
+                                                  <span className=" rounded-md bg-gray-100 " >{game.Leisure}</span>
+
+                                              </div>
+                                              <div  className="flex mt-3 ">
+                                                  <a className="mr-3"href={game.chromekurl}>
+                                                      <div className={game.chrome}></div>
+                                                  </a>
+                                                  <a className="mr-3" href={game.tuiteurl}>
+                                                      <div className={game.tuite}></div>
+                                                  </a>
+
+                                              </div>
+                                          </div>
+                                      </div>
+
+
+                                  </div>
+                              </div>
+
+                          ))}
+                      </div>
+                      </div>
                   </section>
 
                   {/* Secondary column (hidden on smaller screens) */}
                   <aside className="hidden lg:block lg:flex-shrink-0 lg:order-first">
                       <div className="h-full relative flex flex-col w-96 border-r border-gray-200 bg-gray-100">
                           {/* Your content */}
+
                       </div>
                   </aside>
               </main>
