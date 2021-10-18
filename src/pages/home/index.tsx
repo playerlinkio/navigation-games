@@ -396,7 +396,7 @@ export default function Home() {
                   </div>
                       <div className="  grid-cols-2  flex-wrap flex-row	 md:grid grid-cols-3 ">
                           {games.map((game)=>(
-                              <div key={game.name} className=" hover:shadow-2xl bg-white ml-5 mr-5 mb-5 rounded-lg md:ml-20 md:mr-20  md:mb-20  "  >
+                              <div key={game.name} className=" duration-300 hover:shadow-2xl  hover:border-transparent hover:shadow-xs  bg-white ml-5 mr-5 mb-5 rounded-lg md:ml-20 md:mr-20  md:mb-20  "  >
                                   <div className="p-5  relative">
                                       <div className="md:flex ">
                                           <a href={game.url} className="h-12 ">
