@@ -31,7 +31,7 @@ const games=[
         name:"Crypto Fishing ",
         introduce:"A casual game of fishingA casual game of fishing " ,
         url:"http://playerlink.org",
-        Leisure:"Leisure",
+        Tactics:"Tactics",
         tuite:"fa fa-twitter",
         tuiteurl:"#",
         chrome:"fa fa-chrome",
@@ -409,7 +409,6 @@ export default function Home() {
                                               <div className=" font-extrabold mt-3 justify-start flex  gap-x-2 text-sm " >
                                                   <span className=" rounded-md bg-gray-100 " >{game.Tactics}</span>
                                                   <span className=" rounded-md bg-gray-100 " >{game.CardGame}</span>
-                                                  <span className=" rounded-md bg-gray-100 " >{game.Leisure}</span>
 
                                               </div>
                                               <div  className="flex mt-3 ">
