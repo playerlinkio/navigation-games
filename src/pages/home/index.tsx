@@ -31,7 +31,7 @@ const games=[
         name:"Crypto Fishing ",
         introduce:"A casual game of fishingA casual game of fishing " ,
         url:"http://playerlink.org",
-        Leisure:"Leisure",
+        Tactics:"Tactics",
         tuite:"fa fa-twitter",
         tuiteurl:"#",
         chrome:"fa fa-chrome",
@@ -396,7 +396,7 @@ export default function Home() {
                   </div>
                       <div className="  grid-cols-2  flex-wrap flex-row	 md:grid grid-cols-3 ">
                           {games.map((game)=>(
-                              <div key={game.name} className=" duration-300 hover:shadow-2xl  hover:border-transparent hover:shadow-xs  bg-white ml-5 mr-5 mb-5 rounded-lg md:ml-20 md:mr-20  md:mb-20  "  >
+                              <div key={game.name} className=" transform duration-700 hover:shadow-2xl hover:-translate-y-3  bg-white ml-5 mr-5 mb-5 rounded-lg md:ml-20 md:mr-20  md:mb-20  "  >
                                   <div className="p-5  relative">
                                       <div className="md:flex ">
                                           <a href={game.url} className="h-12 ">
@@ -409,7 +409,6 @@ export default function Home() {
                                               <div className=" font-extrabold mt-3 justify-start flex  gap-x-2 text-sm " >
                                                   <span className=" rounded-md bg-gray-100 " >{game.Tactics}</span>
                                                   <span className=" rounded-md bg-gray-100 " >{game.CardGame}</span>
-                                                  <span className=" rounded-md bg-gray-100 " >{game.Leisure}</span>
 
                                               </div>
                                               <div  className="flex mt-3 ">
