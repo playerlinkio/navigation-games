@@ -13,6 +13,7 @@ import {
     XIcon,
 } from '@heroicons/react/outline'
 
+
 const games=[
     {
         imageUrl:"https://awesomenear.com/img/logo/cryptoempire.jpg",
